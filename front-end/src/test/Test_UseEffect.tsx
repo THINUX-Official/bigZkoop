@@ -1,6 +1,6 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 
-export const Test_UseState = () => {
+export const Test_UseEffect = () => {
 
     let [count, setCount] = useState(0);
     const increment = () => {
@@ -11,6 +11,12 @@ export const Test_UseState = () => {
             setCount(count - 1);
         }
     }
+
+    useEffect(() => { // useEffect act like as a side effect.
+
+        console.log(`New count is ${count}`);
+
+    }, [count]); // dependency array. At least execute one time without the dependency array.
 
     return (
         <>

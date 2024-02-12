@@ -8,8 +8,8 @@ function App() {
 
     return (
         <>
-            {/*<Test_UseState/>*/}
-            <Test_UseEffect/>
+            {/*<Test_UseState/>
+            <Test_UseEffect/>*/}
         </>
     );
 }

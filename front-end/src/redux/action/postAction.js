@@ -1,8 +1,6 @@
-import {FETCH_BUTTON_CLICKED} from './types';
+import {FETCH_BUTTON_CLICKED} from "./types";
 
-export const PostAction = () => { // action creator
-
-    // action
+export const fetchPosts = () => { // action creator
     return {
         type: FETCH_BUTTON_CLICKED, // description of the action.
         payload: [
@@ -37,4 +35,4 @@ export const PostAction = () => { // action creator
             },
         ]
     }
-};
+}

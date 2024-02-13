@@ -1,8 +1,6 @@
-import AllPostReducer from './reducer-AllPost';
 import {combineReducers} from 'redux';
+import {cartData} from "./reducer";
 
-const rootReducer = combineReducers({
-    allPost: AllPostReducer,
+export default combineReducers({
+    cartData,
 });
-
-export default rootReducer;

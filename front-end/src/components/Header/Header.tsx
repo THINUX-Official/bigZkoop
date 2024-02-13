@@ -14,7 +14,7 @@ export const Header = () => {
         <>
             <div className="bg-cyan-400 w-full h-[50px] flex justify-between items-center select-none">
                 <div>
-                    <img className="h-[30px] " src={logo} alt="logo"/>
+                    <img className="w-auto h-6 cursor-pointer" src={logo} alt="logo"/>
                 </div>
 
                 <div className="flex items-center">

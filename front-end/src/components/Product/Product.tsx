@@ -1,30 +1,33 @@
 import tShirt from '../../view/images/products/tShirt.png';
 
 import {FaHeart} from "react-icons/fa";
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import {useDispatch} from "react-redux";
 
 export const Product = () => {
 
-    let [qty, setQty] = useState(0);
+    let tShirtPrice = 1200;
 
-    const increment = () => {
+    let [qty, setQty] = useState(0);
+    let [price, setPrice] = useState(tShirtPrice);
+
+    const qtyIncrement = () => {
         setQty(qty + 1);
+        setPrice(price = price + 1200.00);
     }
 
-    const decrement = () => {
+    const qtyDecrement = () => {
         if (!(qty === 0)) {
             setQty(qty - 1);
+            setPrice(price = price - 1200.00);
         }
     }
-
-    const dispatch = useDispatch;
 
     return (
         <>
             <div>
                 <div className="font-poppins w-full h-full rounded">
-                    <table className="w-full drop-shadow-md shadow-lg border">
+                    <table className="w-full drop-shadow-md shadow-lg border select-none">
                         <thead className="text-left">
                         <tr className="text-gray-400">
                             <th>PRODUCT</th>
@@ -45,12 +48,12 @@ export const Product = () => {
                             <td>
                                 <div className="flex items-center">
                                     <button
-                                        onClick={decrement}
+                                        onClick={qtyDecrement}
                                         className="bg-gray-200 px-2 rounded-full text-sm">-
                                     </button>
                                     <h1 className="text-[11px] font-bold mx-2 border rounded px-2">{qty}</h1>
                                     <button
-                                        onClick={increment}
+                                        onClick={qtyIncrement}
                                         className="bg-gray-200 px-2 rounded-full text-sm">+
                                     </button>
                                 </div>
@@ -58,7 +61,8 @@ export const Product = () => {
                             <td>
                                 <div className="flex text-[14px] font-bold">
                                     <h1>Rs. </h1>
-                                    <h1>1200.00</h1>
+                                    <h1>{price}</h1>
+                                    <h1>.00</h1>
                                 </div>
                             </td>
                             <td>

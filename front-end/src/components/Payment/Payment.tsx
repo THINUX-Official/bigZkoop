@@ -5,7 +5,7 @@ import {FaCcMastercard} from "react-icons/fa";
 export const Payment = () => {
     return (
         <>
-            <div className="w-full rounded shadow-lg drop-shadow-md border">
+            <div className="w-full rounded shadow-lg drop-shadow-md border select-none">
                 <div className="p-5">
                     <div className="border p-5">
                         <h1 className="text-gray-500">Have a coupon?</h1>

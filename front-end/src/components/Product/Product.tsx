@@ -1,11 +1,25 @@
 import tShirt from '../../view/images/products/tShirt.png';
-import bangle from '../../view/images/products/bangle.png';
-import headBand from '../../view/images/products/headBand.png';
-import bottle from '../../view/images/products/bottle.png';
 
 import {FaHeart} from "react-icons/fa";
+import {useState} from "react";
+import {useDispatch} from "react-redux";
 
 export const Product = () => {
+
+    let [qty, setQty] = useState(0);
+
+    const increment = () => {
+        setQty(qty + 1);
+    }
+
+    const decrement = () => {
+        if (!(qty === 0)) {
+            setQty(qty - 1);
+        }
+    }
+
+    const dispatch = useDispatch;
+
     return (
         <>
             <div>
@@ -30,9 +44,15 @@ export const Product = () => {
                             </td>
                             <td>
                                 <div className="flex items-center">
-                                    <button className="bg-gray-200 px-2 rounded-full text-sm">-</button>
-                                    <h1 className="text-[11px] font-bold mx-2 border rounded px-2">0</h1>
-                                    <button className="bg-gray-200 px-2 rounded-full text-sm">+</button>
+                                    <button
+                                        onClick={decrement}
+                                        className="bg-gray-200 px-2 rounded-full text-sm">-
+                                    </button>
+                                    <h1 className="text-[11px] font-bold mx-2 border rounded px-2">{qty}</h1>
+                                    <button
+                                        onClick={increment}
+                                        className="bg-gray-200 px-2 rounded-full text-sm">+
+                                    </button>
                                 </div>
                             </td>
                             <td>

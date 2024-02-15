@@ -1,0 +1,24 @@
+{
+  "products": [
+    {
+      "name": "T-Shirt",
+      "image": "/images/products/tShirt.png",
+      "price": 1200.00
+    },
+    {
+      "name": "Bangle",
+      "image": "/images/products/bangle.png",
+      "price": 250.00
+    },
+    {
+      "name": "Head Band",
+      "image": "/images/products/headBand.png",
+      "price": 350.00
+    },
+    {
+      "name": "Bottle",
+      "image": "/images/products/bottle.png",
+      "price": 1500.00
+    }
+  ]
+}
